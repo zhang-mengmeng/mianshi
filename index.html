@@ -9,9 +9,23 @@
     <h2>git ---</h2>
     <h3>weqeeqwwq</h3>
     <script>
-      function a() {}
-      console.log(Object.getPrototypeOf(a));
-      console.log(Object.getPrototypeOf(a) === Function.prototype);
+      // function a() {}
+      // console.log(Object.getPrototypeOf(a));
+      // console.log(Object.getPrototypeOf(a) === Function.prototype);
+
+      // var names = ["abc", "cba", "nba"];
+      // const abc = names[Symbol.iterator];
+      // console.log(abc().next());
+
+      function* foo(name) {
+        console.log(111);
+        console.log(222);
+
+        yield console.log(name, 333);
+        console.log(444);
+      }
+      const baz = foo("第一次执行");
+      baz.next();
     </script>
   </body>
 </html>
